@@ -1,8 +1,26 @@
 ---
-# the default layout is 'page'
+title: About
 icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+updated at January 13, 2024
+
+Profile
+---
+---------------------
+- Name : HyunMin Ahn
+- Major : Computer Engineering / Math
+
+Interests
+---
+---------------------
+- Web Development with Javascript
+- AI
+- Applied Math for AI
+- Finance
+
+Career & Activities
+---
+---------------------
+- None
