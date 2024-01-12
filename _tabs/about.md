@@ -16,7 +16,7 @@ Interests
 ---
 ---------------------
 - Web Development with Javascript
-- AI
+- AI, especially NLP
 - Applied Math for AI
 - Finance
 
