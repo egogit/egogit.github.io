@@ -15,7 +15,7 @@ tags: [python, leetcode, medium, hash]
 ![thumbnail](/assets/img/thumbnail/dailycode.jpg){:  width:"100px " height:"100px" style:"alignCenter" }
 
 <br/><br/><br/>
-#### **문제 내용**
+## Problem
 
 > You are given two strings of the same length s and t. In one step you can choose any character of t and replace it with another character. Return the minimum number of steps to make t an anagram of s. An Anagram of a string is a string that contains the same characters with a different (or the same) ordering.
 <br/>
@@ -23,7 +23,7 @@ tags: [python, leetcode, medium, hash]
 anagram이란 한 단어의 철자를 서로 바꾸어 목표하는 단어로 바꾸는 행위를 의미한다. 문제에서는 s에서 t로의 anagram이 가능하게 하려면 철자 몇개를 바꾸어야 하는지 문제이다.
 
 <br/><br/><br/>
-#### **문제 해결 흐름**
+## Solution
 
 **1\. anagram을 위해서는 철자의 종류와 갯수가 s와 t 서로 같아야 한다는 점이 중요하다.**
 
@@ -85,11 +85,11 @@ s의 크기 만큼의 반복이 진행되기에 시간 복잡도는 N이다.
 횟수를 count하기 위한 sc 배열 크기의 공간 복잡도 N을 가진다.
 
 <br/><br/><br/>
-#### **다른 해결 방식**
+## Other's Solution
 
 간단한 문제로 이를 벗어나는 풀이가 없었다.
 
 <br/><br/><br/>
-#### **문제 링크**
+## Problem Link
 
  [LeetCode - 1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/)
