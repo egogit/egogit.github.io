@@ -92,4 +92,4 @@ s의 크기 만큼의 반복이 진행되기에 시간 복잡도는 N이다.
 <br/><br/><br/>
 #### **문제 링크**
 
- [LeetCode - 1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/find-the-difference/description/)
+ [LeetCode - 1347. Minimum Number of Steps to Make Two Strings Anagram](https://leetcode.com/problems/minimum-number-of-steps-to-make-two-strings-anagram/description/)
