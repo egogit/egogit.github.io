@@ -9,6 +9,9 @@
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
+  
+- type: blog
+  icon: "fa-solid fa-blog"
 
 - type: rss
   icon: "fas fa-rss"

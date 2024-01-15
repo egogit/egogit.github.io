@@ -59,6 +59,8 @@
           {%- capture url -%}
             https://{{ entry.type }}.com/{{ site[entry.type].username }}
           {%- endcapture -%}
+        {% when 'blog' %}
+          {% assign url = 'https://minit-devlog.tistory.com/' %}
         {% when 'rss' %}
           {% assign url = '/feed.xml' | relative_url %}
         {% else %}
