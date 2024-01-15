@@ -113,4 +113,9 @@
   {% endunless %}
 
   {% include metadata-hook.html %}
+  
+  {% if page.layout == 'archives' %}
+    {% include leetcodeinfo-loader.html %}
+  {% endif %}
+  
 </head>

@@ -1,0 +1,50 @@
+
+<!-- Leetcode Info Request API -->
+<script>
+  let user = 'm1r1st4r';
+  
+  function countStreak(streakInfo) {
+    let streak = 0;
+    
+    var currentDate = new Date();
+    currentDate.setHours(9, 0, 0, 0);
+
+    if (currentDate.getHours() < 9){
+      currentDate.setDate(currentDate.getDate() - 1);
+    }
+
+    let unixTimestamp = Math.floor(currentDate.getTime() / 1000);
+        
+    while(true){
+      if(unixTimestamp.toString() in streakInfo) {
+        streak += 1;
+        unixTimestamp -= 86400;
+      }else{
+        break;
+      }
+    }
+    return streak;
+  }
+  
+  document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://leetcode-api-faisalshohag.vercel.app/' + user)
+                .then(res => res.json())
+                .then(data => {
+                  let result = '';
+                  let spaces = '&nbsp;'.repeat(5);
+                  let streakInfo = data.submissionCalendar;
+                  
+                  let streak = countStreak(streakInfo);
+                  
+                  result += '<span>' + '<b>Easy:</b>' + data.easySolved + '/' + data.totalEasy + spaces +'</span>';
+                  result += '<span>' + '<b>Medium:</b>' + data.mediumSolved + '/' + data.totalMedium + spaces +'</span>';
+                  result += '<span>' + '<b>Hard:</b>' + data.hardSolved + '/' + data.totalHard +'</span>';
+                  result += '<div>' + '<b>Daily Streak:</b>' + streak + '</div>';
+                  
+                  document.getElementById('leetcode-info').innerHTML = result;
+                })
+                .catch(error => {
+                  document.getElementById('leetcode-info').innerHTML = 'fail to get Leetcode Info' + error;
+                });
+        });
+</script>
