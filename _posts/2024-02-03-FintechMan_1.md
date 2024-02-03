@@ -1,5 +1,13 @@
 ---
 title: "[FintechMan] 1. 재테크 관리프로젝트 기획"
+author: egogit
+date: '2024-02-03 17:51:00'
+categories:
+- Project
+- FintechMan
+tags:
+- project
+- fintechman
 ---
 
 ![thumbnail](/assets/img/thumbnail/fintechman.png){:  width:"120px " height:"100px" style:"alignCenter" }
