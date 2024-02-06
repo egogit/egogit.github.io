@@ -13,7 +13,7 @@ tags:
 ![thumbnail](/assets/img/thumbnail/fintechman.png){:  width:"120px " height:"100px" style:"alignCenter" }
 
 
-## 2일차 개발 내용
+## 3일차 개발 내용
 
 ![thumbnail](/assets/img/post/fintechman/240205-fintechman-4_1.png){:  width:"120px " height:"100px" style:"alignCenter" }
 
