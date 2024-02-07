@@ -1,5 +1,5 @@
 ---
-title: "[FintechMan] 5. 한글깨짐 현상 해결 및 세션 관리 약간"
+title: "[FintechMan] 6. 한글 깨짐 현상 해결 및 세션 관리 약간"
 author: egogit
 date: '2024-02-07 22:53:00'
 categories:
@@ -13,7 +13,7 @@ tags:
 ![thumbnail](/assets/img/thumbnail/fintechman.png){:  width:"120px " height:"100px" style:"alignCenter" }
 
 
-## 5일차 개발 내용
+## 6일차 개발 내용
 
 
 1. 한글깨짐 현상을 해결했다. github에서 clone을 해서 프로젝트를 열어봤을 때 한글이 깨져있었다. 우분투와 윈도우에서 한글을 저장하는 방식이 달라서 생기는 문제로 보인다. 
