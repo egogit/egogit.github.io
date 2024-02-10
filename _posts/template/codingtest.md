@@ -1,7 +1,7 @@
 ---
-title: "[python3] 1207. Unique Number of Occurrences"
+title: "[python3] 0000. Template"
 author: egogit
-date: '2024-01-17 10:36:00'
+date: '2024-00-00 00:00:00'
 categories:
 - Algorithm
 - LeetCode
@@ -9,7 +9,7 @@ tags:
 - python
 - leetcode
 - easy
-- hash
+- 
 ---
 
 **풀이 일자: 24.00.00**

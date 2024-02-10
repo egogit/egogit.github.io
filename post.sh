@@ -1,19 +1,69 @@
 #!/bin/bash
 
-if [ "$#" -ne 4 ]; then
-    echo "Usage: $0 yyyy-mm-dd source number lang"
-    exit 1
+currentYear=$(date '+%Y')
+currentMonth=$(date '+%m')
+currentDay=$(date '+%d')
+
+read -p "Enter the content(leetcode,FintechMan,Error,programmers): " content
+
+if [ "${content}" == "leetcode" ] || [ "${content}" == "programmers" ]; then
+    number=0
+    lang=""
+    
+    while [ ! $number ] || [ $number -le 0 ] ;
+    do
+        read -p "Enter the number of quiz: " number
+    done
+    
+    while [ ! "$lang" ] || [ "$lang" == "" ] ;
+    do
+        read -p "Enter the language of solution(Python): " lang
+    done
+    
+    template="./_posts/template/codingtest.md"
+    file="./_posts/${currentYear}-${currentMonth}-${currentDay}-${content}${number}_${lang}.md"
+    
+    cp "${template}" "${file}"
+    echo "Successfully created: ${file}" 
+    
+    
+elif [ "${content}" == "FintechMan" ]; then
+    number=0
+    
+    while [ ! $number ] || [ $number -le 0 ] ;
+    do
+        read -p "Enter the number of post: " number
+    done
+    
+    template="./_posts/template/fintechman.md"
+    file="./_posts/${currentYear}-${currentMonth}-${currentDay}-${content}_${number}.md"
+    
+    cp "${template}" "${file}"
+    echo "Successfully created: ${file}" 
+    
+    
+elif [ "${content}" == "Error" ]; then
+    number=0
+    
+    while [ ! $number ] || [ $number -le 0 ] ;
+    do
+        read -p "Enter the number of post: " number
+    done
+    
+    template="./_posts/template/error.md"
+    file="./_posts/${currentYear}-${currentMonth}-${currentDay}-${content}_${number}.md"
+    
+    cp "${template}" "${file}"
+    echo "Successfully created: ${file}" 
+    
+    
+else
+    read -p "Enter the name of post: " filename
+    
+    file="./_posts/${filename}.md"
+    
+    touch "${file}"
+    echo "Successfully created: ${file}" 
+    
 fi
-
-input="./_posts/template/codingtest.md"
-
-if [ ! -f "${input}" ]; then
-    echo "There is no such file: ${input}"
-    exit 1
-fi
-
-output="./_posts/$1-$2$3_$4.md"
-
-cp "${input}" "${output}"
-
-echo "Successfully created: ${output}"
+    
