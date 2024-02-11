@@ -21,7 +21,7 @@ math: true
 **증명**
 
 Let
-$$ \; p=2n+1(n\in \mathbb{Z_+}), \quad A=\left\{ a^2|a=0,1,\cdots ,n\right\}, \quad B=\left\{ -b^2-1|b=0,1,\cdots ,n\right\} $$
+$$ \; p=2n+1(n\in \mathbb{Z_+}), \quad A=\left\{ a^2\mid a=0,1,\cdots ,n\right\}, \quad B=\left\{ -b^2-1|b=0,1,\cdots ,n\right\} $$
 
 <br><br>
 **State: In set A,B, there are no elements that are equivalent mod p**
@@ -32,23 +32,23 @@ $$ \exists x,y\in A \quad (0\leq x\neq y \leq n) $$
 
 $$ x^2\equiv y^2 (mod \; p) $$
 
-$$ p|x^2-y^2=(x-y)(x+y) $$ 
+$$ p\mid x^2-y^2=(x-y)(x+y) $$ 
 
-$$ p|(x-y) \; or \; p|(x+y) (\because p \; is \; a \; prime)$$
+$$ p\mid (x-y) \; or \; p\mid (x+y) (\because p \; is \; a \; prime)$$
 
 <br>
 
 i)
 $$ -n\leq x - y \leq n $$
 
-$$ p|(x-y)=0 $$
+$$ p\mid (x-y)=0 $$
 
 it is contradiction $$ (\because x \neq y) $$
 
 ii)
 $$ 1\leq x + y \leq 2n-1 $$
 
-$$ x+y $$ can't be divided by p ($$\because $$ p: prime $$ x+y<p, \quad p=2n+1 ) $$
+$$ p \nmid x+y $$ ($$\because $$ p: prime $$ x+y<p, \quad p=2n+1 ) $$
 
 Since p is prime, there is no divisor $$ d $$ in $$ 0 \leq d \leq p-1 $$
 
@@ -87,7 +87,7 @@ $$ a^2+b^2+1 \equiv 0 \quad (mod \; p)  \quad \quad \blacksquare $$
 
 <br>
 
-$$ p | a^2+b^2+1 \quad \exists k \in \mathbb{Z_+}  \quad a^2+b^2+1=pk$$
+$$ p \mid a^2+b^2+1 \quad \exists k \in \mathbb{Z_+}  \quad a^2+b^2+1=pk$$
 
 $$ kp = a^2+b^2+1 \leq n^2+n^2+1 = 2n^2+1 < (2n+1)(2n+1) = p^2, \quad k < p $$
 
@@ -111,7 +111,7 @@ $$    = (ae-bf-cg-dh)^2 + (af+be+eh-dg)^2 + (ag+ce+df-bh)^2 + (ah+de+bg-cf)^2 \q
 
 $$ 2m = x^2 + y^2 (x,y,m \in \mathbb{Z_+}) $$
 
-$$ 2 | x^2 + y^2 $$
+$$ 2 \mid x^2 + y^2 $$
 
 It means that x, y should have the same parity.
 
@@ -119,7 +119,7 @@ $$ m = \frac{x^2+y^2}{2}= \frac{2x^2+2y^2}{4}= \frac{x^2+y^2+2xy+x^2+y^2-2xy}{4}
 
 $$   = (\frac{x+y}{2})^2+(\frac{x-y}{2})^2 $$
 
-$$ 2|x+y, \quad  2|x-y $$
+$$ 2\mid x+y, \quad  2\mid x-y $$
 $$ (\because $$ x, y has the same parity)
 
 $$ \therefore \quad $$ m also can be expressed as a sum of two integer squares  $$ \quad \quad \blacksquare $$
@@ -127,4 +127,58 @@ $$ \therefore \quad $$ m also can be expressed as a sum of two integer squares  
 <br><br>
 ### Proof
 
-추가할 예정
+**i) p=1**
+
+It is trivial $$ 1 = 1^2 + 0^2 + 0^2 + 0^2 $$
+
+**ii) p=2**
+
+It is also trivial $$ 2 = 1^2 + 1^2 + 0^2 + 0^2 $$
+
+<br>
+
+iii) $$p \nmid 2, \quad p:$$ prime
+
+**State: If kp is the smallest multiple of p that can be expressed as the sum of four non-negative squares, then k = 1**
+
+**a) $$ 2\mid k \quad x^2 + y^2 + z^2 + w^2 = kp $$**
+
+It means $$ 2\mid x^2 + y^2 + z^2 + w^2 $$
+
+$$x,y,z,w$$ can have several parity combination (even, odd) in [(4,0),[3,1],[0,4]]
+
+Then I can pick $$a,b,c,d$$ that satisfies $$ a \equiv b \quad (mod \; 2) \quad c \equiv d \quad (mod \; 2) $$
+
+By Lemma 3,
+
+$$ (\frac{x+y}{2})^2+(\frac{x-y}{2})^2+(\frac{z+w}{2})^2+(\frac{z-w}{2})^2=(\frac{k}{2})p $$
+
+Then $$ kp $$ is also even.
+
+We have several parity combination (even, odd) for $$ x, y, z, w $$
+
+1) all numbers are even or odd
+- numbers in parentheses are integer
+
+$$ (\frac{2a+2b}{2})^2+(\frac{2a-2b}{2})^2+(\frac{2c+2d}{2})^2+(\frac{2c-2d}{2})^2 $$
+
+$$ (\frac{2a+2b+2}{2})^2+(\frac{2a-2b}{2})^2+(\frac{2c+2d+2}{2})^2+(\frac{2c-2d}{2})^2$$
+
+2) two numbers for even, others for odd
+
+- If x, y has same parity, numbers in parentheses are integer
+- If x, y has different parity, numbers in parentheses are not integer.
+
+$$ (\frac{2a+2b}{2})^2+(\frac{2a-2b}{2})^2+(\frac{2c+2d+2}{2})^2+(\frac{2c-2d}{2})^2$$
+
+$$ (\frac{2a+2b+1}{2})^2+(\frac{2a-2b+1}{2})^2+(\frac{2c+2d+1}{2})^2+(\frac{2c-2d+1}{2})^2$$
+
+Thus $$ (\frac{k}{2})p $$ would not be even 
+
+But $$ \frac{k}{2} $$ is an integer and $$ \frac{k}{2} < k $$
+
+So it is contradiction $$ (\because$$ k is the smallest positive integer $$ ) $$
+
+**b) $$ 2\nmid k \quad k \geq 3 $$**
+
+계속 추가할 예정
