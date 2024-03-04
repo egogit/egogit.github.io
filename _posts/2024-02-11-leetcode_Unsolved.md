@@ -17,3 +17,7 @@ tags:
 
  [LeetCode - 1463. Cherry Pickup II](https://leetcode.com/problems/cherry-pickup-ii/)
 
+**Graph(Medium)**
+
+[leetcode - 787. Cheapest Flights Within K Stops](https://leetcode.com/problems/cheapest-flights-within-k-stops/)
+
